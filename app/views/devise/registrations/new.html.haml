@@ -19,5 +19,7 @@
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class: 'text_box'
     %hr
+    .forgotpassword
+      = render "devise/shared/links", class: 'links'
     .actions
       = f.submit "Sign up"
