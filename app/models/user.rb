@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_one :profile, dependent: :destroy
+
+  delegate :age, :gender, to: :profile, allow_nil: true
+  
   def prepare_profile
     profile || build_profile
   end

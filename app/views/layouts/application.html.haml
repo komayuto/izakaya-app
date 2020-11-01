@@ -26,7 +26,7 @@
           -# アイコンの画像の設定
           .dropdown-content
             = link_to 'プロフィール', profile_path
-            = link_to 'お気に入り', favorites_path
+            -# = link_to 'お気に入り', favorites_path
             = link_to 'ログアウト', destroy_user_session_path, date: { method: 'delete' }
       - else
         -# elseのためログインしていなければという意味
