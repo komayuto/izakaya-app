@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: auto;
+  background-color: #B1F9D0;
+
+  a.header_loginBtn {
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 22px 16px;
+  }
+}
