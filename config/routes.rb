@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   
   root to: "articles#index"
 
+  # scope module: :apps do
+  #   resouce :profile, only: [:show, :edit, :update]
+  # end
+  scope module: :apps do
+    resource :profile, only: [:show, :edit, :update]
+  end
 end

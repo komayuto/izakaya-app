@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: auto;
+  background-color: #B1F9D0;
+
+  a.header_loginBtn {
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 22px 16px;
+  }
+  &_logos {
+    min-width: 0;
+    display: flex;
+    img {
+      cursor: pointer;
+      height: 10px;
+      margin-top: 25px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &_pageTitle {
+    color: white;
+    line-height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  &_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+}

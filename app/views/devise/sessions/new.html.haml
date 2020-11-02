@@ -1,25 +1,25 @@
 .container
+  %h2 一緒に気軽に呑みませんか
   .initial_image
-    = image_tag 'download.jpg'
-  %h2 ログイン
+    = image_tag 'izakaya.png'
+  %h3 ログイン
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .field
+    .field.text_a
       = f.label :email, class: 'text'
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text_box'
       %hr
-    .field
+    .field.text_a
       = f.label :password, class: 'text'
       %br/
       = f.password_field :password, autocomplete: "current-password", class: 'text_box'
       %hr
-    .other
-      .remember_me
-        - if devise_mapping.rememberable?
-          .field
-            = f.check_box :remember_me
-            = f.label :remember_me
-      .forgotpassword
-        = render "devise/shared/links", class: 'links'
+    .remember_me.text_a
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
+    .forgotpassword.text_a
+      = render "devise/shared/links", class: 'links'
     .actions
       = f.submit " LOGIN", class: 'login-btn'
