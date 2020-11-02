@@ -4,7 +4,7 @@ class Profile < ApplicationRecord
   has_one_attached :avatar
 
   def age
-    return '不明' unless birtday.prosent?
+    return '不明' unless birthday.present?
     years = Time.zone.now.year - birtday.year
     days = Time.zone.now.yday - birtday.yday
     if days < 0
