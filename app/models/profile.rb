@@ -5,8 +5,8 @@ class Profile < ApplicationRecord
 
   def age
     return '不明' unless birthday.present?
-    years = Time.zone.now.year - birtday.year
-    days = Time.zone.now.yday - birtday.yday
+    years = Time.zone.now.year - birthday.year
+    days = Time.zone.now.yday - birthday.yday
     if days < 0
       "#{years - 1}歳"
     else
