@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   #   resouce :profile, only: [:show, :edit, :update]
   # end
   scope module: :apps do
+
     resource :profile, only: [:show, :edit, :update]
+    resource :posts, only: [:show, :create, :destroy]
+    resource :timeline, only: [:show]
+
   end
 end
