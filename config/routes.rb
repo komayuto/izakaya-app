@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   # scope module: :apps do
   #   resouce :profile, only: [:show, :edit, :update]
   # end
+
+  resources :accounts, only: [:show] do
+    resources :follows, only: [:create]
+    resources :unfollows, only: [:create]
+  end
+
   scope module: :apps do
 
     resource :profile, only: [:show, :edit, :update]
