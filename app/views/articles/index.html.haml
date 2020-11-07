@@ -1,1 +1,11 @@
-= render 'form', article: @article
+.indexPage 
+  = render 'form', article: @article
+  %h3 
+    = current_user.display_name
+  %h4 
+    .tabs
+      = link_to 'フォロー'
+      = link_to 'フォローワー'
+      = link_to 'いいねしている'
+      = link_to 'いいねされている'
+  
