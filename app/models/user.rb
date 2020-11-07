@@ -31,14 +31,18 @@ class User < ApplicationRecord
   end
 
   def follow!(user)
-    user.id = get_user_id(user)
-    following_relationships.create!(following_id: user.id)
+    user_id = get_user_id(user)
+    following_relationships.create!(following_id: user_id)
   end
 
   def unfollow!(user)
-    user.id = get_user_id(user)
-    relation = following_relationships.find_by!(following_id: user.id)
+    user_id = get_user_id(user)
+    relation = following_relationships.find_by!(following_id: user_id)
     relation.destroy!
+  end
+
+  def has_followed?(user)
+    following_relationships.exists?(following_id: user.id)
   end
 
   private
