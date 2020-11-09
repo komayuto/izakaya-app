@@ -1,0 +1,6 @@
+.contribution_container
+  = form_with(model: @post, local: true) do |f| 
+    .contribution_container_group
+      = f.text_area :content, class: 'form-control', rows: 5
+      = f.submit '投稿', class: "btn-primary btn-block"
+
