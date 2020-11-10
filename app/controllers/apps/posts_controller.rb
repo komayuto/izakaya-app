@@ -3,12 +3,11 @@ class Apps::PostsController < Apps::ApplicationController
   before_action :set_post, only:[:destroy]
 
   def index
-    @posts = Post.all
-    # @post = current_user.posts.build
-    # @posts = Post.search(params[:search]).order(created_at: :desc)
+    @posts = Post.search(params[:search])
   end
   
   def show
+    
   end
 
   def new

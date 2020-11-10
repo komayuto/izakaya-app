@@ -4,8 +4,11 @@ class Post < ApplicationRecord
   belongs_to :user
 
   def self.search(search)
-    Post.all unless search
-    Post.where(['content LIKE ?', "%#{search}%#"])
+    if search
+      Post.where(['content LIKE ?', "%#{search}%"])
+    else
+      Post.all
+    end
   end
 
   

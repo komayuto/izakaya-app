@@ -1,7 +1,7 @@
 = link_to post_path(id: post.id) do
   .card
     .card_content
-      .card_title
+      %li
         = post.content
         - if current_user == post.user
           = link_to "delete", post_path(post), method: :delete, data: {confirm: "削除してよろしいですか？"}
