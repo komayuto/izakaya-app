@@ -13,12 +13,12 @@ Rails.application.routes.draw do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
   end
-
+  
   scope module: :apps do
-
     resource :profile, only: [:show, :edit, :update]
-    resource :posts, only: [:show, :create, :destroy]
     resource :timeline, only: [:show]
-
+    resources :posts, only: [:index, :show, :new, :create, :destroy]
   end
+
+
 end

@@ -1,0 +1,20 @@
+.container
+  .postsPage_userPage
+    .searchPage
+      %h3 検索
+      = form_tag(posts_path, :method => 'get') do
+        .search-container_group
+          = label_tag :search, '検索', class: 'search-label'
+          = text_field_tag :search, params[:search], class:"form-control" , placeholder: 'キーワードを入力'
+        = submit_tag '検索', :name => nil,  class: "btn-primary"
+
+    .new_btn
+      = link_to new_post_path do
+        .float_btn
+          %p つぶやく
+
+  .murmurPage
+    %h4 つぶやき一覧
+    - posts.each do |post|
+      = render 'commons/post', post: post
+      

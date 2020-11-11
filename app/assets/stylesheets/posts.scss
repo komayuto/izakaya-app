@@ -1,0 +1,49 @@
+.postsPage_userPage {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap : wrap; 
+
+  .searchPage {
+    text-align: center;
+    .btn-primary {
+      margin-top: 20px;
+    }
+  }
+
+  .float_btn {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+.murmurPage {
+    a {
+        display: flex;
+        justify-content: space-around;
+      .card_delete {
+        margin-top: 10;
+      }
+    }
+
+  img {
+    width: 40px;
+  }
+}
+.post_comment {
+  h2, h3 {
+    font-size: 20px;
+    text-align: center;
+    color: #333333;
+  }
+  .post_detail {
+    display: flex;
+    justify-content: space-around;
+    background-color: #DCC2FF;
+    .show_nickname {
+      display: flex;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

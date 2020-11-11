@@ -1,1 +1,26 @@
-= render 'articles/form', article: @article
+.post#post-show{data: {post_id: @post.id}}
+  .post_comment
+    - if @post.eyecatch.attached?
+      .post_image
+        = image_tag @post.eyecatch
+    %h2 つぶやき内容
+    .post_detail
+      .show_nickname
+        = link_to account_path(@post.user) do
+          = image_tag @post.user.avatar_image
+        %p= @post.user.display_name
+      .show_post_content
+        %p.post_content= @post.content
+    %h3 コメントを追加
+.post
+  %h2= I18n.t('articles.comment_list')
+  .comments-container
+.container
+  .btn-secondary.show-comment-form
+    コメントを追加
+  .comment-text-area.hidden
+    = text_area_tag :comment_content, '', class: 'sm'
+    .btn-secondary.add-comment-button
+      コメントを追加
+
+-# = javascript_pack_tag 'article'
