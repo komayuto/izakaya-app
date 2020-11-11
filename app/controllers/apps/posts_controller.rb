@@ -7,7 +7,7 @@ class Apps::PostsController < Apps::ApplicationController
   end
   
   def show
-    
+    set_post
   end
 
   def new

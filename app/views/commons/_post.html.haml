@@ -1,7 +1,13 @@
 = link_to post_path(id: post.id) do
-  .card
-    .card_content
-      %li
+  .justify
+    .card
+      .card_image
+        = image_tag post.user.avatar_image
+      .card_name
+        = current_user.display_name
+      .card_content
         = post.content
-        - if current_user == post.user
+      - if current_user == post.user
+        .card_delete
           = link_to "delete", post_path(post), method: :delete, data: {confirm: "削除してよろしいですか？"}
+    %hr
