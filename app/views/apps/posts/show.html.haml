@@ -13,7 +13,7 @@
         %p.post_content= @post.content
     %h3 コメントを追加
 .post
-  %h2= I18n.t('articles.comment_list')
+  %h2= I18n.t('posts.comment_list')
   .comments-container
 .container
   .btn-secondary.show-comment-form
@@ -23,4 +23,4 @@
     .btn-secondary.add-comment-button
       コメントを追加
 
--# = javascript_pack_tag 'article'
+= javascript_pack_tag 'posts'
