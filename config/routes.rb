@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #   resouce :profile, only: [:show, :edit, :update]
   # end
 
+  
   resources :accounts, only: [:show] do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
@@ -18,6 +19,14 @@ Rails.application.routes.draw do
     resource :profile, only: [:show, :edit, :update]
     resource :timeline, only: [:show]
     resources :posts, only: [:index, :show, :new, :create, :destroy]
+  end
+
+  namespace :api, defaults: {format: :json} do
+
+    scope '/posts/:post_id' do
+
+      resources :comments, only: [:index, :create]
+    end
   end
 
 
