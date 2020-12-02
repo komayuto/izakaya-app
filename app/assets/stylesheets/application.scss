@@ -6,6 +6,8 @@
 @import 'index';
 @import 'footer';
 @import 'posts';
+@import 'actiontext';
+@import 'trix/dist/trix.css';
 
 
 a {
@@ -24,3 +26,6 @@ a {
   color: #979797;
 }
 
+.hidden {
+  display: none;
+}

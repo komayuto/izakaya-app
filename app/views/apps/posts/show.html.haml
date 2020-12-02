@@ -1,3 +1,5 @@
+.contribution_container
+  = link_to 'つぶやきに戻る', posts_path
 .post#post-show{data: {post_id: @post.id}}
   .post_comment
     - if @post.eyecatch.attached?
@@ -10,11 +12,13 @@
           = image_tag @post.user.avatar_image
         %p= @post.user.display_name
       .show_post_content
-        %p.post_content= @post.content
+        %p.post_content
+          = @post.content
     %h3 コメントを追加
 .post
   %h2= I18n.t('posts.comment_list')
   .comments-container
+
 .container
   .btn-secondary.show-comment-form
     コメントを追加
@@ -23,4 +27,4 @@
     .btn-secondary.add-comment-button
       コメントを追加
 
-= javascript_pack_tag 'posts'
+= javascript_pack_tag 'post'

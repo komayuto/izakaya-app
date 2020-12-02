@@ -34,6 +34,7 @@ gem 'devise'
 gem 'faker'
 gem 'hamlit'
 gem 'image_processing', '~> 1.2'
+gem 'active_model_serializers'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

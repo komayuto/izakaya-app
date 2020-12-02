@@ -8,6 +8,7 @@ class Apps::PostsController < Apps::ApplicationController
   
   def show
     set_post
+    # @comments = @post.comments
   end
 
   def new
