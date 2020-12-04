@@ -1,0 +1,20 @@
+%h2 お勧めのお店の紹介をしよう
+.container
+  %ul 
+    - @timeline.errors.full_messages.each do |message|
+      %li= message
+
+  = form_with(model: @timeline, url: new_timeline_path, method: 'put', local: true) do |f|
+    %div
+      = f.label :eyecatch, 'アイキャッチ'
+    %div
+      = f.file_field :eyecatch
+    %div
+      = f.label :title, '店名'
+    %div
+      = f.text_field :title
+    %div
+      = f.label :content, '説明文'
+    %div 
+      = f.rich_text_area :content
+    = f.submit '投稿', class: 'btn-primary'
