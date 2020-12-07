@@ -1,2 +1,9 @@
-= render 'commons/form'
-%h2 お勧めのお店を紹介しよう
+.timeline#timeline-show{data: {timeline_id: @timeline.id}}
+  - if @timeline.eyecatch.attached?
+    .timeline_image
+      = image_tag @timeline.eyecatch
+    .card
+      .card_title
+        = timeline.title
+      .card_content
+        = timeline.content

@@ -1,10 +1,11 @@
 class Apps::TimelinesController < Apps::ApplicationController
-  before_action :set_timeline, only: [:show]
+  before_action :set_timeline, only: [:show, :destroy]
   
   def index
     @timelines = Timeline.all
   end
   def show
+    set_timeline
   end
   def new
     @timeline = current_user.timelines.build
@@ -21,7 +22,7 @@ class Apps::TimelinesController < Apps::ApplicationController
   def destroy
     timeline = current_user.timelines.find(params[:id])
     timeline.destroy!
-    redirect_to timeline_path, notice: '削除しました'
+    redirect_to timelines_path, notice: '削除しました'
   end
 
   private

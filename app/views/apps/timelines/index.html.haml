@@ -1,8 +1,1 @@
-.container
-  = render 'commons/form'
-  %h2 お勧めのお店を紹介しよう
-  - @timelines.each do |timeline|
-    = render 'commons/timeline', timeline: timeline
-  =link_to new_timeline_path do
-    .float_btn 
-      %i.fa.fa-plus     
+= render 'commons/timelines', timelines: @timelines
