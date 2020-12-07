@@ -1,11 +1,13 @@
 class Apps::TimelinesController < Apps::ApplicationController
-  before_action :authenticate_user!, only: [:show, :new]
+  before_action :set_timeline, only: [:show]
   
-  def show
+  def index
     @timelines = Timeline.all
   end
+  def show
+  end
   def new
-    @timeline = current_user
+    @timeline = current_user.timelines.build
   end
   def create
     @timeline = current_user.timelines.build(timeline_params)

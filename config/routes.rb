@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   scope module: :apps do
     resource :profile, only: [:show, :edit, :update]
-    resources :timelines, only: [:show, :new]
+    resources :timelines, only: [:index, :show, :new]
     resources :posts, only: [:index, :show, :new, :create, :destroy]
   end
 
