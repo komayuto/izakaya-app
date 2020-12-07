@@ -1,9 +1,17 @@
-.timeline#timeline-show{data: {timeline_id: @timeline.id}}
-  - if @timeline.eyecatch.attached?
-    .timeline_image
-      = image_tag @timeline.eyecatch
-    .card
-      .card_title
-        = timeline.title
-      .card_content
-        = timeline.content
+.container
+  .timeline_path
+    = link_to 'お勧めのお店に戻る', timelines_path
+  .timeline#timeline-show{data: {timeline_id: @timeline.id}}
+    .show_timeline_image
+      - if @timeline.eyecatch.attached?
+        .timeline_image
+          = image_tag @timeline.eyecatch
+      .show-timeline_card
+        .timeline_title
+          %p.timeline_title
+            = @timeline.title
+        .show_timeline_content
+          %p.timeline_content
+            = @timeline.content
+
+

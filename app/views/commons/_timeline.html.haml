@@ -1,12 +1,10 @@
-= link_to timelines_path(id: timeline.id) do
+= link_to timeline_path(id: timeline.id) do
   .justify
     .card
       .card_image
         = image_tag timeline.user.avatar_image
       .card_name
         = timeline.title
-      .card_content
-        = timeline.content
       - if current_user == timeline.user
         .card_delete
           = link_to "delete", timeline_path(timeline), method: :delete, data: {confirm: "削除してよろしいですか？"}
