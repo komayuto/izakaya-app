@@ -10,7 +10,13 @@ jon = User.create!(email: 'john@example.com', password: 'password')
 emily = User.create!(email: 'emily@example.com', password: 'password')
 
 5.times do
-  Posts.create(
+  jon.posts.create!(
+    content: Faker::Lorem.sentence(word_count: 10)
+  )
+end
+
+5.times do
+  emily.posts.create!(
     content: Faker::Lorem.sentence(word_count: 10)
   )
 end
