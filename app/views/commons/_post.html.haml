@@ -4,7 +4,7 @@
       .card_image
         = image_tag post.user.avatar_image
       .card_name
-        = current_user.display_name
+        = post.author_name
       .card_content
         = post.content
       - if current_user == post.user
