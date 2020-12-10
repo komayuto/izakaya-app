@@ -2,8 +2,7 @@
   = render 'commons/form', article: @article
   %h3 
     = current_user.display_name
-  %h4 
-    .tabs
-      = link_to 'フォロー'
-      = link_to 'フォローワー'
+  %section.stats
+    = render 'articles/stats'
+
   

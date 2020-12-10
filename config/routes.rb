@@ -14,6 +14,12 @@ Rails.application.routes.draw do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
   end
+
+  resources :articles do
+    member do
+     get :following, :followers
+    end
+  end
   
   scope module: :apps do
     resource :profile, only: [:show, :edit, :update]
