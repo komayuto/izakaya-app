@@ -1,5 +1,6 @@
 .contribution_container
   = link_to 'つぶやきに戻る', posts_path
+  = link_to 'トップに戻る', root_path
 .post#post-show{data: {post_id: @post.id}}
   .post_comment
     - if @post.eyecatch.attached?
