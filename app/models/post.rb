@@ -13,11 +13,8 @@ class Post < ApplicationRecord
       Post.all
     end
   end
+end
 
   def author_name
     user.display_name
   end
-
-  
-
-end
