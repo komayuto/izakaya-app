@@ -1,3 +1,24 @@
 .card_content {
   display: block
 }
+
+.show_timeline_image {
+  text-align: center;
+}
+
+.timeline_image {
+  img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.justify {
+  .card {
+    text-align: center;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
