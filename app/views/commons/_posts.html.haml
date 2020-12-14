@@ -1,7 +1,7 @@
 .container
   .postsPage_userPage
     .searchPage
-      %h3 検索
+      %h3 投稿者検索
       = form_tag(posts_path, :method => 'get') do
         .search-container_group
           = label_tag :search, '検索', class: 'search-label'
