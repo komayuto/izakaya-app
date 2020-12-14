@@ -1,0 +1,16 @@
+{
+  "name": "izakaya-app",
+  "description": "This is izakaya-app",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/komayuto/desktop/プログラミング/izakaya-app",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
