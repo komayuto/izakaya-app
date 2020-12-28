@@ -1,12 +1,13 @@
 - @user ||= current_user
 .stats
-  %a{:href => "#{following_article_path(@user)}"}
-    %strong#following.stat
-      = @user.followings.count
-    following
-  %a{:href => "#{followers_article_path(@user)}"}
-    %strong#followers.stat
-      = @user.followers.count
-    followers
-    
+  - if user_signed_in?
+    %a{:href => "#{following_article_path(@user)}"}
+      %strong#following.stat
+        = @user.followings.count
+      following
+    %a{:href => "#{followers_article_path(@user)}"}
+      %strong#followers.stat
+        = @user.followers.count
+      followers
+      
 
